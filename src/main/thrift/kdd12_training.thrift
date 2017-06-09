@@ -18,4 +18,5 @@ struct AdRequest {
 
 service AdRequestReceiver {
   void ping()
+  i64 getRowId(1:AdRequest adreq)
 }

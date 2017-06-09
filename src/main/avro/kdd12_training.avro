@@ -6,15 +6,15 @@
     {"name": "rowID"        , "type": "long"},
     {"name": "clicks"       , "type": "int"},
     {"name": "impression"   , "type": "int"},
-    {"name": "displayURL"   , "type": ["string", "null"]},
-    {"name": "adID"         , "type": ["int"   , "null"]},
-    {"name": "advertiserID" , "type": ["int"   , "null"]},
-    {"name": "depth"        , "type": ["int"   , "null"]},
-    {"name": "position"     , "type": ["int"   , "null"]},
-    {"name": "queryID"      , "type": ["int"   , "null"]},
-    {"name": "keywordID"    , "type": ["int"   , "null"]},
-    {"name": "titleID"      , "type": ["int"   , "null"]},
-    {"name": "descriptionID", "type": ["int"   , "null"]},
-    {"name": "userID"       , "type": ["int"   , "null"]}
+    {"name": "displayURL"   , "type": "string"},
+    {"name": "adID"         , "type": "int"},
+    {"name": "advertiserID" , "type": "int"},
+    {"name": "depth"        , "type": "int"},
+    {"name": "position"     , "type": "int"},
+    {"name": "queryID"      , "type": "int"},
+    {"name": "keywordID"    , "type": "int"},
+    {"name": "titleID"      , "type": "int"},
+    {"name": "descriptionID", "type": "int"},
+    {"name": "userID"       , "type": "int"}
   ]
 }
