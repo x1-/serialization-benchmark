@@ -12,23 +12,23 @@ import org.apache.avro.message.SchemaStore;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
-public class AdRequest extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 849426426297527456L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AdRequest\",\"namespace\":\"com.inkenkun.x1.serialization.benchmark.avro\",\"fields\":[{\"name\":\"rowID\",\"type\":\"long\"},{\"name\":\"clicks\",\"type\":\"int\"},{\"name\":\"impression\",\"type\":\"int\"},{\"name\":\"displayURL\",\"type\":\"string\"},{\"name\":\"adID\",\"type\":\"int\"},{\"name\":\"advertiserID\",\"type\":\"int\"},{\"name\":\"depth\",\"type\":\"int\"},{\"name\":\"position\",\"type\":\"int\"},{\"name\":\"queryID\",\"type\":\"int\"},{\"name\":\"keywordID\",\"type\":\"int\"},{\"name\":\"titleID\",\"type\":\"int\"},{\"name\":\"descriptionID\",\"type\":\"int\"},{\"name\":\"userID\",\"type\":\"int\"}]}");
+public class AdRequestNullable extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -6467686381300010360L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"AdRequestNullable\",\"namespace\":\"com.inkenkun.x1.serialization.benchmark.avro\",\"fields\":[{\"name\":\"rowID\",\"type\":\"long\"},{\"name\":\"clicks\",\"type\":[\"int\",\"null\"]},{\"name\":\"impression\",\"type\":[\"int\",\"null\"]},{\"name\":\"displayURL\",\"type\":[\"string\",\"null\"]},{\"name\":\"adID\",\"type\":[\"int\",\"null\"]},{\"name\":\"advertiserID\",\"type\":[\"int\",\"null\"]},{\"name\":\"depth\",\"type\":[\"int\",\"null\"]},{\"name\":\"position\",\"type\":[\"int\",\"null\"]},{\"name\":\"queryID\",\"type\":[\"int\",\"null\"]},{\"name\":\"keywordID\",\"type\":[\"int\",\"null\"]},{\"name\":\"titleID\",\"type\":[\"int\",\"null\"]},{\"name\":\"descriptionID\",\"type\":[\"int\",\"null\"]},{\"name\":\"userID\",\"type\":[\"int\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<AdRequest> ENCODER =
-      new BinaryMessageEncoder<AdRequest>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<AdRequestNullable> ENCODER =
+      new BinaryMessageEncoder<AdRequestNullable>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<AdRequest> DECODER =
-      new BinaryMessageDecoder<AdRequest>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<AdRequestNullable> DECODER =
+      new BinaryMessageDecoder<AdRequestNullable>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageDecoder instance used by this class.
    */
-  public static BinaryMessageDecoder<AdRequest> getDecoder() {
+  public static BinaryMessageDecoder<AdRequestNullable> getDecoder() {
     return DECODER;
   }
 
@@ -36,41 +36,41 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
    * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    */
-  public static BinaryMessageDecoder<AdRequest> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<AdRequest>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<AdRequestNullable> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<AdRequestNullable>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this AdRequest to a ByteBuffer. */
+  /** Serializes this AdRequestNullable to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a AdRequest from a ByteBuffer. */
-  public static AdRequest fromByteBuffer(
+  /** Deserializes a AdRequestNullable from a ByteBuffer. */
+  public static AdRequestNullable fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
   @Deprecated public long rowID;
-  @Deprecated public int clicks;
-  @Deprecated public int impression;
+  @Deprecated public java.lang.Integer clicks;
+  @Deprecated public java.lang.Integer impression;
   @Deprecated public java.lang.CharSequence displayURL;
-  @Deprecated public int adID;
-  @Deprecated public int advertiserID;
-  @Deprecated public int depth;
-  @Deprecated public int position;
-  @Deprecated public int queryID;
-  @Deprecated public int keywordID;
-  @Deprecated public int titleID;
-  @Deprecated public int descriptionID;
-  @Deprecated public int userID;
+  @Deprecated public java.lang.Integer adID;
+  @Deprecated public java.lang.Integer advertiserID;
+  @Deprecated public java.lang.Integer depth;
+  @Deprecated public java.lang.Integer position;
+  @Deprecated public java.lang.Integer queryID;
+  @Deprecated public java.lang.Integer keywordID;
+  @Deprecated public java.lang.Integer titleID;
+  @Deprecated public java.lang.Integer descriptionID;
+  @Deprecated public java.lang.Integer userID;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public AdRequest() {}
+  public AdRequestNullable() {}
 
   /**
    * All-args constructor.
@@ -88,7 +88,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
    * @param descriptionID The new value for descriptionID
    * @param userID The new value for userID
    */
-  public AdRequest(java.lang.Long rowID, java.lang.Integer clicks, java.lang.Integer impression, java.lang.CharSequence displayURL, java.lang.Integer adID, java.lang.Integer advertiserID, java.lang.Integer depth, java.lang.Integer position, java.lang.Integer queryID, java.lang.Integer keywordID, java.lang.Integer titleID, java.lang.Integer descriptionID, java.lang.Integer userID) {
+  public AdRequestNullable(java.lang.Long rowID, java.lang.Integer clicks, java.lang.Integer impression, java.lang.CharSequence displayURL, java.lang.Integer adID, java.lang.Integer advertiserID, java.lang.Integer depth, java.lang.Integer position, java.lang.Integer queryID, java.lang.Integer keywordID, java.lang.Integer titleID, java.lang.Integer descriptionID, java.lang.Integer userID) {
     this.rowID = rowID;
     this.clicks = clicks;
     this.impression = impression;
@@ -355,50 +355,50 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
-   * Creates a new AdRequest RecordBuilder.
-   * @return A new AdRequest RecordBuilder
+   * Creates a new AdRequestNullable RecordBuilder.
+   * @return A new AdRequestNullable RecordBuilder
    */
-  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder newBuilder() {
-    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder();
+  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder newBuilder() {
+    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder();
   }
 
   /**
-   * Creates a new AdRequest RecordBuilder by copying an existing Builder.
+   * Creates a new AdRequestNullable RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new AdRequest RecordBuilder
+   * @return A new AdRequestNullable RecordBuilder
    */
-  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder newBuilder(com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder other) {
-    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder(other);
+  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder newBuilder(com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder other) {
+    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder(other);
   }
 
   /**
-   * Creates a new AdRequest RecordBuilder by copying an existing AdRequest instance.
+   * Creates a new AdRequestNullable RecordBuilder by copying an existing AdRequestNullable instance.
    * @param other The existing instance to copy.
-   * @return A new AdRequest RecordBuilder
+   * @return A new AdRequestNullable RecordBuilder
    */
-  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder newBuilder(com.inkenkun.x1.serialization.benchmark.avro.AdRequest other) {
-    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder(other);
+  public static com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder newBuilder(com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable other) {
+    return new com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder(other);
   }
 
   /**
-   * RecordBuilder for AdRequest instances.
+   * RecordBuilder for AdRequestNullable instances.
    */
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AdRequest>
-    implements org.apache.avro.data.RecordBuilder<AdRequest> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<AdRequestNullable>
+    implements org.apache.avro.data.RecordBuilder<AdRequestNullable> {
 
     private long rowID;
-    private int clicks;
-    private int impression;
+    private java.lang.Integer clicks;
+    private java.lang.Integer impression;
     private java.lang.CharSequence displayURL;
-    private int adID;
-    private int advertiserID;
-    private int depth;
-    private int position;
-    private int queryID;
-    private int keywordID;
-    private int titleID;
-    private int descriptionID;
-    private int userID;
+    private java.lang.Integer adID;
+    private java.lang.Integer advertiserID;
+    private java.lang.Integer depth;
+    private java.lang.Integer position;
+    private java.lang.Integer queryID;
+    private java.lang.Integer keywordID;
+    private java.lang.Integer titleID;
+    private java.lang.Integer descriptionID;
+    private java.lang.Integer userID;
 
     /** Creates a new Builder */
     private Builder() {
@@ -409,7 +409,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder other) {
+    private Builder(com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.rowID)) {
         this.rowID = data().deepCopy(fields()[0].schema(), other.rowID);
@@ -466,10 +466,10 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
     }
 
     /**
-     * Creates a Builder by copying an existing AdRequest instance
+     * Creates a Builder by copying an existing AdRequestNullable instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.inkenkun.x1.serialization.benchmark.avro.AdRequest other) {
+    private Builder(com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.rowID)) {
         this.rowID = data().deepCopy(fields()[0].schema(), other.rowID);
@@ -538,7 +538,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'rowID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setRowID(long value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setRowID(long value) {
       validate(fields()[0], value);
       this.rowID = value;
       fieldSetFlags()[0] = true;
@@ -558,7 +558,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'rowID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearRowID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearRowID() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -576,7 +576,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'clicks'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setClicks(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setClicks(java.lang.Integer value) {
       validate(fields()[1], value);
       this.clicks = value;
       fieldSetFlags()[1] = true;
@@ -596,7 +596,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'clicks' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearClicks() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearClicks() {
+      clicks = null;
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -614,7 +615,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'impression'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setImpression(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setImpression(java.lang.Integer value) {
       validate(fields()[2], value);
       this.impression = value;
       fieldSetFlags()[2] = true;
@@ -634,7 +635,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'impression' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearImpression() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearImpression() {
+      impression = null;
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -652,7 +654,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'displayURL'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setDisplayURL(java.lang.CharSequence value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setDisplayURL(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.displayURL = value;
       fieldSetFlags()[3] = true;
@@ -672,7 +674,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'displayURL' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearDisplayURL() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearDisplayURL() {
       displayURL = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -691,7 +693,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'adID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setAdID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setAdID(java.lang.Integer value) {
       validate(fields()[4], value);
       this.adID = value;
       fieldSetFlags()[4] = true;
@@ -711,7 +713,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'adID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearAdID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearAdID() {
+      adID = null;
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -729,7 +732,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'advertiserID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setAdvertiserID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setAdvertiserID(java.lang.Integer value) {
       validate(fields()[5], value);
       this.advertiserID = value;
       fieldSetFlags()[5] = true;
@@ -749,7 +752,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'advertiserID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearAdvertiserID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearAdvertiserID() {
+      advertiserID = null;
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -767,7 +771,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'depth'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setDepth(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setDepth(java.lang.Integer value) {
       validate(fields()[6], value);
       this.depth = value;
       fieldSetFlags()[6] = true;
@@ -787,7 +791,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'depth' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearDepth() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearDepth() {
+      depth = null;
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -805,7 +810,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'position'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setPosition(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setPosition(java.lang.Integer value) {
       validate(fields()[7], value);
       this.position = value;
       fieldSetFlags()[7] = true;
@@ -825,7 +830,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'position' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearPosition() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearPosition() {
+      position = null;
       fieldSetFlags()[7] = false;
       return this;
     }
@@ -843,7 +849,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'queryID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setQueryID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setQueryID(java.lang.Integer value) {
       validate(fields()[8], value);
       this.queryID = value;
       fieldSetFlags()[8] = true;
@@ -863,7 +869,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'queryID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearQueryID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearQueryID() {
+      queryID = null;
       fieldSetFlags()[8] = false;
       return this;
     }
@@ -881,7 +888,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'keywordID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setKeywordID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setKeywordID(java.lang.Integer value) {
       validate(fields()[9], value);
       this.keywordID = value;
       fieldSetFlags()[9] = true;
@@ -901,7 +908,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'keywordID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearKeywordID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearKeywordID() {
+      keywordID = null;
       fieldSetFlags()[9] = false;
       return this;
     }
@@ -919,7 +927,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'titleID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setTitleID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setTitleID(java.lang.Integer value) {
       validate(fields()[10], value);
       this.titleID = value;
       fieldSetFlags()[10] = true;
@@ -939,7 +947,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'titleID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearTitleID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearTitleID() {
+      titleID = null;
       fieldSetFlags()[10] = false;
       return this;
     }
@@ -957,7 +966,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'descriptionID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setDescriptionID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setDescriptionID(java.lang.Integer value) {
       validate(fields()[11], value);
       this.descriptionID = value;
       fieldSetFlags()[11] = true;
@@ -977,7 +986,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'descriptionID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearDescriptionID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearDescriptionID() {
+      descriptionID = null;
       fieldSetFlags()[11] = false;
       return this;
     }
@@ -995,7 +1005,7 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'userID'.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder setUserID(int value) {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder setUserID(java.lang.Integer value) {
       validate(fields()[12], value);
       this.userID = value;
       fieldSetFlags()[12] = true;
@@ -1015,16 +1025,17 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'userID' field.
       * @return This builder.
       */
-    public com.inkenkun.x1.serialization.benchmark.avro.AdRequest.Builder clearUserID() {
+    public com.inkenkun.x1.serialization.benchmark.avro.AdRequestNullable.Builder clearUserID() {
+      userID = null;
       fieldSetFlags()[12] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public AdRequest build() {
+    public AdRequestNullable build() {
       try {
-        AdRequest record = new AdRequest();
+        AdRequestNullable record = new AdRequestNullable();
         record.rowID = fieldSetFlags()[0] ? this.rowID : (java.lang.Long) defaultValue(fields()[0]);
         record.clicks = fieldSetFlags()[1] ? this.clicks : (java.lang.Integer) defaultValue(fields()[1]);
         record.impression = fieldSetFlags()[2] ? this.impression : (java.lang.Integer) defaultValue(fields()[2]);
@@ -1046,8 +1057,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<AdRequest>
-    WRITER$ = (org.apache.avro.io.DatumWriter<AdRequest>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<AdRequestNullable>
+    WRITER$ = (org.apache.avro.io.DatumWriter<AdRequestNullable>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -1055,8 +1066,8 @@ public class AdRequest extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<AdRequest>
-    READER$ = (org.apache.avro.io.DatumReader<AdRequest>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<AdRequestNullable>
+    READER$ = (org.apache.avro.io.DatumReader<AdRequestNullable>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
