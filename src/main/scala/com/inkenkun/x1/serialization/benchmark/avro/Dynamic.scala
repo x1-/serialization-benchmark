@@ -1,15 +1,16 @@
-package com.inkenkun.x1.serialization.benchmark
+package com.inkenkun.x1.serialization.benchmark.avro
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream, File}
 
 import org.apache.avro.Schema
 import org.apache.avro.generic.{GenericData, GenericDatumReader, GenericDatumWriter, GenericRecord}
 import org.apache.avro.io.{DecoderFactory, EncoderFactory}
-
 import org.openjdk.jmh.annotations.{Benchmark, Scope, State}
 
+import com.inkenkun.x1.serialization.benchmark.Loop
+
 @State( Scope.Benchmark )
-class AvroDynamic extends Loop {
+class Dynamic extends Loop {
 
   lazy val definition =
     """{

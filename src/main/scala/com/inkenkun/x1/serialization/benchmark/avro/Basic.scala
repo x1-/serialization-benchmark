@@ -1,4 +1,4 @@
-package com.inkenkun.x1.serialization.benchmark
+package com.inkenkun.x1.serialization.benchmark.avro
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 
@@ -6,10 +6,10 @@ import org.apache.avro.io.{DecoderFactory, EncoderFactory}
 import org.apache.avro.specific.{SpecificDatumReader, SpecificDatumWriter}
 import org.openjdk.jmh.annotations.{Benchmark, Scope, State}
 
-import com.inkenkun.x1.serialization.benchmark.avro.AdRequest
+import com.inkenkun.x1.serialization.benchmark.Loop
 
 @State( Scope.Benchmark )
-class Avro extends Loop {
+class Basic extends Loop {
 
   lazy val adDatumWriter = new SpecificDatumWriter[AdRequest](classOf[AdRequest])
   lazy val adDatumReader = new SpecificDatumReader[AdRequest](classOf[AdRequest])

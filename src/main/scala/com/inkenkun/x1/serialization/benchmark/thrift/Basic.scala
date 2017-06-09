@@ -1,13 +1,13 @@
-package com.inkenkun.x1.serialization.benchmark
+package com.inkenkun.x1.serialization.benchmark.thrift
 
-import org.apache.thrift.{TDeserializer, TSerializer}
 import org.apache.thrift.protocol.TBinaryProtocol
+import org.apache.thrift.{TDeserializer, TSerializer}
 import org.openjdk.jmh.annotations.{Benchmark, Scope, State}
 
-import com.inkenkun.x1.serialization.benchmark.thrift.AdRequest
+import com.inkenkun.x1.serialization.benchmark.Loop
 
 @State( Scope.Benchmark )
-class Thrift extends Loop {
+class Basic extends Loop {
 
   lazy val adreq = serialization(1)
 
