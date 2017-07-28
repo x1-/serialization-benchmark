@@ -1,0 +1,20 @@
+{
+  "namespace": "com.inkenkun.x1.serialization.benchmark.avro",
+  "type": "record",
+  "name": "AdRequest",
+  "fields": [
+    {"name": "rowID"        , "type": "long"},
+    {"name": "clicks"       , "type": "int"},
+    {"name": "impression"   , "type": "int"},
+    {"name": "displayURL"   , "type": "string"},
+    {"name": "adID"         , "type": "int"},
+    {"name": "advertiserID" , "type": "int"},
+    {"name": "depth"        , "type": "int"},
+    {"name": "position"     , "type": "int"},
+    {"name": "queryID"      , "type": "int"},
+    {"name": "keywordID"    , "type": "int"},
+    {"name": "titleID"      , "type": "int"},
+    {"name": "descriptionID", "type": "int"},
+    {"name": "userID"       , "type": "int"}
+  ]
+}

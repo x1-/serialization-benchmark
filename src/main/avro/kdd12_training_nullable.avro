@@ -1,0 +1,20 @@
+{
+  "namespace": "com.inkenkun.x1.serialization.benchmark.avro",
+  "type": "record",
+  "name": "AdRequestNullable",
+  "fields": [
+    {"name": "rowID"        , "type": "long"},
+    {"name": "clicks"       , "type": ["int", "null"]},
+    {"name": "impression"   , "type": ["int", "null"]},
+    {"name": "displayURL"   , "type": ["string", "null"]},
+    {"name": "adID"         , "type": ["int", "null"]},
+    {"name": "advertiserID" , "type": ["int", "null"]},
+    {"name": "depth"        , "type": ["int", "null"]},
+    {"name": "position"     , "type": ["int", "null"]},
+    {"name": "queryID"      , "type": ["int", "null"]},
+    {"name": "keywordID"    , "type": ["int", "null"]},
+    {"name": "titleID"      , "type": ["int", "null"]},
+    {"name": "descriptionID", "type": ["int", "null"]},
+    {"name": "userID"       , "type": ["int", "null"]}
+  ]
+}

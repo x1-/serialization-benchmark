@@ -1,28 +1,23 @@
 package com.inkenkun.x1.serialization.benchmark.thrift
 
-import org.apache.thrift.TException
 import org.apache.thrift.protocol.TBinaryProtocol
-import org.apache.thrift.TSerializer
-import org.apache.thrift.TDeserializer
-
+import org.apache.thrift.{TDeserializer, TSerializer}
 import org.openjdk.jmh.annotations.{Benchmark, Scope, State}
 
+import com.inkenkun.x1.serialization.benchmark.Loop
 
 @State( Scope.Benchmark )
-class Thrift {
+class Basic extends Loop {
 
-  val   n1k = 10 * 10 * 10
-  val  n10k = 10 * 10 * 10 * 10
-  val n100k = 10 * 10 * 10 * 10 * 10
-
-  def loop1k( f: Int => Unit )   = 1 to   n1k foreach ( i => f(i) )
-  def loop10k( f: Int => Unit )  = 1 to  n10k foreach ( i => f(i) )
-  def loop100k( f: Int => Unit ) = 1 to n100k foreach ( i => f(i) )
+  lazy val adreq = serialization(1)
 
   @Benchmark
   def serialization$1k() = loop1k( serialization )
 
-  def serialization(i: Int): Byte = {
+  @Benchmark
+  def deserialization$1k() = loop1k( deserialization )
+
+  def serialization(i: Int): Array[Byte] = {
     val o = new AdRequest(
       5325279403472852193L,
       i,
@@ -39,7 +34,14 @@ class Thrift {
       490234
     )
     val serializer = new TSerializer(new TBinaryProtocol.Factory())
-    val bytes = serializer.serialize(o)
-    bytes(0)
+    serializer.serialize(o)
   }
+
+  def deserialization(i: Int): AdRequest = {
+    val deserializer = new TDeserializer(new TBinaryProtocol.Factory())
+    val a = new AdRequest()
+    deserializer.deserialize(a, adreq)
+    a
+  }
+
 }
